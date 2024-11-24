@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Галерея и скрипты</title>
+    <style>
+      body {
+        font-family: Arial, sans-serif;
+        text-align: center;
+        margin: 20px;
+      }
+      .gallery {
+        margin: 20px auto;
+        max-width: 500px;
+      }
+      .gallery img {
+        width: 100%;
+        height: auto;
+        display: block;
+      }
+      .buttons {
+        margin-top: 10px;
+      }
+      .buttons button {
+        margin: 5px;
+        padding: 10px 20px;
+        font-size: 16px;
+      }
+    </style>
+  </head>
+  <body>
+    <h1>Галерея изображений</h1>
+    <div class="gallery">
+      <img id="galleryImage" src="images/image1.jpg" alt="Галерея" />
+      <div class="buttons">
+        <button onclick="prevImage()">Назад</button>
+        <button onclick="nextImage()">Вперед</button>
+      </div>
+    </div>
+
+    <script>
+      // Функция для вывода сообщения в консоль
+      function showMessage() {
+        console.log("Я учу JavaScript!");
+      }
+
+      // Массив изображений для галереи
+      const images = [
+        "images/image1.jpg",
+        "images/image2.jpg",
+        "images/image3.jpg",
+      ];
+
+      let currentImageIndex = 0;
+
+      // Функция переключения на предыдущее изображение
+      function prevImage() {
+        currentImageIndex =
+          (currentImageIndex - 1 + images.length) % images.length;
+        updateGallery();
+      }
+
+      // Функция переключения на следующее изображение
+      function nextImage() {
+        currentImageIndex = (currentImageIndex + 1) % images.length;
+        updateGallery();
+      }
+
+      // Обновление изображения в галерее
+      function updateGallery() {
+        const galleryImage = document.getElementById("galleryImage");
+        galleryImage.src = images[currentImageIndex];
+      }
+    </script>
+  </body>
+</html>
