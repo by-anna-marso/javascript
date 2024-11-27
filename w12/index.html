@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Comment Section</title>
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body>
+    <div class="language-switcher">
+      <button onclick="switchLanguage('fr')">
+        <img src="https://flagcdn.com/fr.svg" alt="French" class="flag-icon" />
+      </button>
+      <button onclick="switchLanguage('ru')">
+        <img src="https://flagcdn.com/ru.svg" alt="Russian" class="flag-icon" />
+      </button>
+      <button onclick="switchLanguage('en')">
+        <img src="https://flagcdn.com/gb.svg" alt="English" class="flag-icon" />
+      </button>
+    </div>
+
+    <div class="container">
+      <div class="comments-display">
+        <h2 data-lang="comments-title">Commentaires</h2>
+        <div id="comments"></div>
+      </div>
+      <div class="comments-form">
+        <h2 data-lang="add-comment-title">Ajoutez un commentaire</h2>
+        <input
+          type="text"
+          id="name"
+          placeholder="Entrez votre nom"
+          data-lang-placeholder="name-placeholder"
+        />
+        <input
+          type="url"
+          id="avatar"
+          placeholder="Lien vers l'avatar"
+          data-lang-placeholder="avatar-placeholder"
+        />
+        <textarea
+          id="message"
+          placeholder="Entrez votre message"
+          data-lang-placeholder="message-placeholder"
+        ></textarea>
+        <button onclick="addComment()" data-lang="publish-button">
+          Publier
+        </button>
+      </div>
+    </div>
+    <script src="script.js"></script>
+  </body>
+</html>
