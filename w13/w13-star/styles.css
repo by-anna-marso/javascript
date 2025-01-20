@@ -1,0 +1,128 @@
+/* Global Styles */
+body {
+  margin: 0;
+  font-family: Arial, sans-serif;
+  background-color: #121212;
+  color: #ffffff;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+}
+
+.language-switcher {
+  display: flex;
+  gap: 10px;
+  margin-bottom: 20px;
+}
+
+.language-switcher button {
+  background: none;
+  border: none;
+  cursor: pointer;
+}
+
+.flag-icon {
+  width: 30px;
+  height: 20px;
+  border-radius: 3px;
+  box-shadow: 0 0 5px rgba(0, 0, 0, 0.5);
+}
+
+.container {
+  display: flex;
+  gap: 20px;
+  max-width: 80%;
+}
+
+/* Comments Display Section */
+.comments-display {
+  flex: 1;
+  background-color: #1e1e1e;
+  padding: 20px;
+  border-radius: 8px;
+  box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.5);
+}
+
+.comments-display h2 {
+  margin-bottom: 15px;
+  color: #ff9800;
+}
+
+.comment {
+  background-color: #2e2e2e;
+  margin-bottom: 15px;
+  padding: 15px;
+  border-radius: 8px;
+  box-shadow: 0px 2px 5px rgba(0, 0, 0, 0.3);
+}
+
+.comment img {
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  margin-right: 10px;
+  vertical-align: middle;
+}
+
+.comment p {
+  display: inline-block;
+  margin: 0;
+  vertical-align: middle;
+}
+
+.comment-time {
+  font-size: 12px;
+  color: #bbbbbb;
+}
+
+/* Comment Form */
+.comments-form {
+  flex: 1;
+  background-color: #1e1e1e;
+  padding: 20px;
+  border-radius: 8px;
+  box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.5);
+}
+
+.comments-form h2 {
+  margin-bottom: 15px;
+  color: #ff9800;
+}
+
+.comments-form input,
+.comments-form textarea {
+  width: 100%;
+  padding: 10px;
+  margin-bottom: 15px;
+  border: none;
+  border-radius: 8px;
+  background-color: #2e2e2e;
+  color: #ffffff;
+}
+
+.comments-form input::placeholder,
+.comments-form textarea::placeholder {
+  color: #bbbbbb;
+}
+
+.comments-form button {
+  width: 100%;
+  padding: 10px;
+  background-color: #ff9800;
+  color: #ffffff;
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+  font-size: 16px;
+}
+
+.comments-form button:hover {
+  background-color: #e68900;
+}
+
+label {
+  color: #ffffff;
+  display: block;
+  margin-bottom: 10px;
+}
